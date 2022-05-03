@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
+.mainContainer{
+  display:grid;
+  place-items: center;
+  height: 100vh;
+  width: 100vw;
+  margin: auto;
+  background: linear-gradient(127deg, aqua,black);
+}
+.mainContainer .container{
+  /* border: 1px solid red; */
+  text-align: center;
+  width: 25%;
+  margin: auto;
+  padding: 4rem 3rem;
+  background: linear-gradient(127deg, aqua,black);
+}
+.mainContainer .container h2{
+  color: white;
+  margin-bottom: 1rem;
+  font-family: 'Lobster', cursive;
+  font-size: 2.5rem;
+}
+.mainContainer .container form input{
+  outline: none;
+  background: transparent;
+  border:1px solid white;
+  padding: 0.3rem 1rem;
+  border-radius: 0.5rem;
+  width: 100%;
+  margin:auto;
+  margin-top:1rem ;
+  margin-bottom:2rem ;
+  color: white;
+}
+.mainContainer .container form button{
+  background:transparent;
+  border: 1px solid white;
+  color: white;
+  font-size:1.1rem;
+  padding: 0.3rem 2rem;
+  border-radius: 0.5rem;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+.mainContainer .container form span{
+position: absolute;
+background: linear-gradient(127deg, aqua,black);
+border-radius: 0.5rem;
+left: 0;
+height: 100%;
+width: 0%;
+bottom: 0;
+transition: 0.5s ease-in-out;
+z-index: -1;
+}
+.mainContainer .container form button:hover span{
+width: 100%;
+}
+.mainContainer .container form button:hover{
+  border: none;
+}
+::-webkit-input-placeholder{
+  color: white;
+}
+
+.dashboardContainer{
+  background: linear-gradient(127deg, aqua,black);
+  width: 100%;
+  height: 100%;
+  padding-bottom: 5rem;
+
+}
+.dashboardContainer .container{
+  width: 80%;
+  margin:auto;
+  padding: 3rem;
+  
+}
+.dashboardContainer .container .row{
+  display:flex;
+  justify-content: space-around;
+}
+.dashboardContainer .container .title{
+  color: white;
+  font-size: 2.5rem;
+}
+.dashboardContainer .container .banner{
+  border-right: 1px solid white;
+}
+.dashboardContainer .container .banner span{
+   font-size: 1.2rem;
+   color: white;
+}
+.dashboardContainer .tempBox{
+  display: flex;
+
+  align-items:center;
+}
+.dashboardContainer .tempBox i{
+  font-size: 5rem;
+  margin-right: 2rem;
+  color: white;
+}
+.dashboardContainer .tempBox h1{
+  font-size: 3rem;
+  color: white;
+  margin-top: 0.5rem;
+}
+.dashboardContainer .container .banner2{
+  display: flex;
+  flex-wrap: wrap;
+}
+.dashboardContainer .container .banner2 .item{
+   width: 30%;
+   margin: 0.1rem;
+   color: white;
+   text-align: center;
+}
+.loader{
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+/* ................forecast section start ............... */
+.forecastContainer{
+  /* border: 1px solid white; */
+  margin-top: 5rem;
+}
+.forecastContainer .row{
+  display: flex;
+  flex-wrap: wrap;
+}
+.forecastContainer .row .forecastBox{
+  color: white;
+  text-align: center;
+  /* border: 1px solid white; */
+  margin: 1rem;
+  width: 10rem;
+  padding: 0.5rem 0rem;
+  background: linear-gradient(127deg, aqua,black);
+  border-radius: 0.2rem;
+  cursor: pointer;
+
+}
+.forecastContainer .row .forecastBox i{
+  font-size: 3rem;
+}
+/* ................forecast section start ............... */

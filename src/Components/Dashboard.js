@@ -5,6 +5,7 @@ import Store from "../ReduxData/Store"
 import { connect } from "react-redux";
 import {WEATHER_ACTION, FORECAST_ACTION} from '../ReduxData/actions/Action'
 import store from "../ReduxData/Store";
+import {fetchData} from './Fetch'
 function mapStateToProps (state)
 {
   return {
@@ -15,29 +16,8 @@ function mapStateToProps (state)
 const Dashboard =(props)=>{
    const {city} = useParams()
     useEffect(()=>{
-      fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=b20334e32cec5ee6474493ca434e29cd`)
-      .then(resp=>resp.json())
-      .then(data=>{
-         Store.dispatch({
-           ...WEATHER_ACTION,
-           payload:{
-            weather:data
-           }
-         })
-      })
-      
-      fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=b20334e32cec5ee6474493ca434e29cd`)
-      .then(resp=>resp.json())
-      .then(data=>{
-      Store.dispatch({
-        ...FORECAST_ACTION,
-        payload:{
-          forecast:data
-        }
-      })
-      })
-      
-    },[]);
+          fetchData(city) 
+    },[])
     let array = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
     if(props.weather!=null && props.forecast!=null){
     var d = new Date()
